@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    // ES6 문법
+    // ES란, ECMAScript의 약자이며 자바스크립트의 표준, 규격을 나타내는 용어
+
+    // [1] let, const 키워드
+    var num1 = 10;
+    var num1 = 20;
+    num1 = 30;
+
+    let num2 = 40;
+    // let num2 = 50;
+    num2 = 60;
+
+    const num3 = 70;
+    // const num3 = 80;
+    // num3= 90;
+
+    console.log(num1, num2, num3);
+
+    // [2] 템플릿 리터럴
+    // 사용법은 ` ` (back tick)으로 가능하다.
+    // { } 중괄호 앞에 달러 표시를 통해 자바스크립트 표현식 사용이 가능하다.
+    // console.log('num1 : ' + num1 + ", num2 : " + num2 + ", num3 : " + num3);
+    console.log(`num1 : ${num1}, num2 : ${num2}, num3 : ${num3}`);
+
+    // [3] 화살표 함수
+    let name = '황인철';
+
+    function myFunc(name) {
+        return `이름 : ${name}`;
+    }
+
+    const myFunc1 = (name) => {
+        return `이름 : ${name}`;
+    }
+
+    const myFunc2 = (name) => `이름 : ${name}`;
+
+    console.log(myFunc(name));  // 이름 : 황인철
+    console.log(myFunc1(name)); // 이름 : 황인철
+    console.log(myFunc2(name)); // 이름 : 황인철
+
+    // [4] 구조 분해 할당
+    const student = {
+        name1: "황인철",
+        age: 30,
+        addr: "인천"
+    }
+
+    const { name1, age, addr } = student;
+    console.log(`name1 : ${name1}, age : ${age}, addr : ${addr}`);
+
+    // [5] Spread 연산자
+    // Array
+    var arr1 = [1, 2, 3, 4, 5];
+    var arr2 = [...arr1, 6, 7, 8, 9];
+
+    console.log(arr2); // [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+
+    // String
+    var str1 = 'icia react';
+    var str2 = [...str1];
+    console.log(str2); // [ "i", "c", "i", "a", " ", "r", "e", "a", "c", "t" ]
+
+</script>
+
+</html>
